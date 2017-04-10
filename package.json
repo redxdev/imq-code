@@ -1,0 +1,26 @@
+{
+    "name": "imq-code",
+    "displayName": "imquery",
+    "description": "imquery language support",
+    "version": "0.0.1",
+    "publisher": "redxdev",
+    "engines": {
+        "vscode": "^1.10.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "imq",
+            "aliases": ["imquery", "imq"],
+            "extensions": [".imq"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "imq",
+            "scopeName": "source.imquery",
+            "path": "./syntaxes/imq.tmLanguage.json"
+        }]
+    }
+}
