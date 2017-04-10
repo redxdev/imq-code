@@ -9,13 +9,13 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#valuekeywords"
+			"include": "#constants"
+		},
+		{
+			"include": "#number"
 		},
 		{
 			"include": "#operators"
-		},
-		{
-			"include": "#wordoperators"
 		},
 		{
 			"include": "#strings"
@@ -39,23 +39,29 @@
 				"match": "\\b(func|delete|break|return|in|where|out|from|if|else|for|while|do|loop|import|export)\\b"
 			}]
 		},
-		"valuekeywords": {
+		"constants": {
 			"patterns": [{
-				"name": "keyword.other.imq",
+				"name": "constant.language.imq",
 				"match": "\\b(nan|NaN|nil|true|false)\\b"
+			}]
+		},
+
+		"number": {
+			"patterns":[{
+				"name": "constant.numeric",
+				"match": "\\d+"
+			}, {
+				"name": "constant.numeric.float",
+				"match": "\\d+\\.\\d*"
 			}]
 		},
 
 		"operators": {
 			"patterns": [{
 				"name": "keyword.operator.imq",
-				"match": "\\b(\\?|=|!|>|<|\\+|-|\\*|\\/|%|:)\\b"
-			}]
-		},
-
-		"wordoperators": {
-			"patterns": [{
-				"name": "keyword.operator.imq",
+				"match": "(\\?|=|!|>|<|\\+|-|\\*|\\/|%|:)"
+			}, {
+				"name": "keyword.control.imq",
 				"match": "\\b(and|or|not)\\b"
 			}]
 		},
